@@ -1,0 +1,128 @@
+This is configurable clock for your Desktop. You can configure date and time display and add your message to display with date and/or time. When started, Desktop Clock becomes (and remains) the bottom window - behind all other windows on your Desktop. Click on Desktop Clock's area (message text, date or time display), brings Desktop Clock to the foreground. 
+
+Features 
+
+Various date and time display formats 
+User's message (stopped or scrolling from right to left) 
+Selectable foreground and background color, position, size, font and fontsize 
+Source code for Desktop Clock is included - to modify source, you need DrDialog, a visual programming environment for REXX. 
+
+REXX MUST BE INSTALLED ON YOUR SYSTEM TO RUN DESKTOP CLOCK AND INSTALL PROCEDURE. 
+
+Files in archive dskclk10.zip: 
+
+File name Description 
+DeskClk.exe Desktop Clock - program 
+DeskClk.ico Desktop Clock - icon 
+DeskClk.inf Desktop Clock - manual (this file) 
+DeskWPS.cmd Desktop Clock - installation procedure 
+source.zip Source files for Desktop Clock 
+
+File FastIni.dll (not included in this archive) is not required, but it's recommended for faster reading/writing to configuration file. 
+
+Installation procedure (DeskWPS.cmd) writes Desktop Clock's specific entry in OS2.INI file, App ToolsByGoran, creates Desktop Clock's program object on your Desktop and creates shadow of Desktop Clock in startup folder (if you select so). 
+
+To Install Desktop Clock, run install procedure with parameter i - DeskWPS i. If you have previous version (0.90) installed, uninstall it before installing Desktop Clock 1.00 (to do it go to Desktop Clock 0.90 directory and run install procedure with parameter i - DeskWPS i). 
+
+On first start, Desktop Clock will create configuration file (DESKCLK.INI) with default values. Desktop Clock resides on Desktop behind all other windows, until you click on it (bring it to front). If it is invisible (i.e. hidden behind other opened windows), select Desktop Clock in Window List (press Ctrl-Esc). Then you can use following keys: 
+
+F1 Show Help (this document) 
+F9 Open Settings dialog 
+F3 Exit Desktop Clock. 
+
+If you want to uninstall Desktop Clock, run install procedure with parameter u - DeskWPS u 
+
+
+
+SETTINGS
+
+When you click on Desktop Clock's area (message text, date or time display) and press F9 key, Settings dialog opens. Following values can be changed: 
+
+Message 
+Enter your message (32 characters max) to display with date and/or time. Message text can be Stopped (text will not move), or you can select to Scroll message text from right to left (it will act like banner). 
+
+Color settings 
+Select foreground (Font radio button) and background (Back radio button) color. 
+Use spin buttons for Red, Green and Blue components until you get desired color. 
+
+Font settings 
+Select one of displayed font names in the list and select it's style (Bold and/or Italic). You can select Font size (between 8 and 100). 
+
+Size settings 
+X position - left edge of Desktop Clock (in pixels - between 0 and screen width-150), 
+Y position - bottom edge of Desktop Clock (in pixels - between 0 and screen height-50), 
+Width (in pixels - between 150 and screen width), 
+Height (in pixels - between 50 and screen height). 
+
+Date settings - format of date display: 
+Year 
+Month - (01, 02, 03 ...). If you select to display month, then month name is disabled. 
+Month name - (Jan, Feb, Mar ...). If you select to display month name, then month is disabled. 
+Day (01, 02, 03 ...) 
+Day of week - (Mon, Tue, Wed ...) 
+
+Time settings - format of time display: 
+Hours 
+Minutes 
+Seconds 
+AM/PM - AM/PM mode - 12-hour display. 
+Refresh - refresh rate in time display (between 1 and 59 seconds). 
+
+After you changed settings values press Apply button to refresh display. 
+If you don't like new settings, press Default button to reset changes and load default settings. Then you can change settings again. 
+
+Note: If configuration file (DESKCLK.INI) is missing or dammaged, Desktop Clock will create new configuration file with default values. 
+
+
+TIPS & TRICKS
+
+
+Limitations 
+If you are using background bitmap for your Desktop, Desktop Clock's border is always visible. If somebody knows how to set transparent background for DrDialog controls, please let me know. 
+
+Background color 
+Desktop Clock reads background color from OS2.INI file and uses it as Desktop Clock's background color (trying to do "seamless" integration with background. If this color does not match with real background color on your Desktop, open Settings dialog (press F9 key) and change background color. 
+To get correct values for RGB components, open Desktop's Settings notebook, select Background page, press Change color button and read red, green and blue values of background color. Select identical values in Desktop Clock's Settings dialog for it's background color (select Back radio button). 
+
+Size (width and height, font size) 
+Desktop Clock keeps itself at the bottom of all the windows on the screen. The desktop icons are part of the Desktop, and if you maximize Desktop Clock's width and height (to the screen width and height), whole Desktop (and icons!) will be hidden. 
+Suggestion: sort desktop icons and set Desktop Clock's size smaller than screen size to keep desktop icons visible. If you want to set Desktop Clock's size to screen size, add your favorite folders and programs to LaunchPad (called Toolbar in Warp 4). It will be above Desktop Clock. 
+
+Note: DO NOT use Desktop Clock and "wallpaper" programs at the same time, because both attempt to remain on the Desktop. 
+
+Refresh time and "flashing" 
+Desktop Clock updates time display every second. If you see annoying "flash", increase refresh rate (up to 59 seconds) and/or unselect seconds display. 
+
+New fonts 
+Here are three predefined fonts: Courier, Helvetica and Times New Roman. 
+To add new font, exit Desktop Clock (if it is running), edit DESKCLK.INI file, Application: DeskClock, Key: Fonts, and add new font name. Font names must be separated with space, and spaces within font name must be changed with _ character (like Times_New_Roman in predefined fonts). 
+Next time you start Desktop Clock, there will be new font in the list and you can select it. 
+
+Note: Don't add system fonts (like System Proportional or WarpSans) to Font list - you won't be able to select font size you want. 
+
+ABOUT
+
+
+Author Goran Ivankovic 
+Address Ulica Josipa Poduje 8 
+HR-52100 Pula 
+Croatia 
+email duga1@pu.tel.hr 
+Home page http://Goran_Ivankovic.tripod.com/ 
+
+This program is provided free under the terms of the GPL. You can use it, modify it and distribute it. If you modify or distribute it the new source must accompany the distribution. I would appreciate a copy of any changes. 
+You may not distribute Desktop Clock 1.00 in any way which leads to your making a profit from it. 
+
+The author makes no representations about the accuracy or suitability of this material for any purpose. It is provided "as is", without any express or implied warranties. The author will assume no liability for damages either from the direct use of this product or as a consequence of the use of this product. 
+
+Thanks to people who tested Desktop Clock and helped me with their comments and suggestions: 
+David Coward 
+Brian Crook 
+Kaare Thor Olsen 
+Klaus Staedtler - special thanks for Desktop Clock's icon :) 
+
+Ideas, comments, corrections, suggestions and bug reports are welcome. 
+
+OS/2 is Trademark of International Bussines Machines Corporation 
+DrDialog is Copyright of International Bussines Machines Corporation 
+FastIni.dll is Copyright of Dennis Bareis - OS/2 Developer in Australia 

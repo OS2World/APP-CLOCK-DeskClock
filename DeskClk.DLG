@@ -1,0 +1,61 @@
+#include "OS2.H"
+
+DLGTEMPLATE 300 LOADONCALL MOVEABLE DISCARDABLE
+BEGIN
+    DIALOG "Desktop Clock - Settings", 300, 134, 99, 300, 125, 
+           WS_SYNCPAINT | NOT FS_DLGBORDER | FS_BORDER,
+           FCF_SYSMENU | FCF_TITLEBAR | FCF_NOMOVEWITHOWNER
+    BEGIN
+        ENTRYFIELD      "", 381, 12, 102, 142, 12, WS_GROUP | ES_MARGIN
+        AUTORADIOBUTTON "Stopped", 382, 155, 102, 64, 12
+        AUTORADIOBUTTON "Scroll", 383, 226, 102, 64, 12
+        CONTROL         "", 321, 8, 78, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        CONTROL         "", 322, 42, 78, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        CONTROL         "", 323, 78, 78, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        AUTORADIOBUTTON "Font", 314, 110, 78, 32, 12, WS_GROUP
+        AUTORADIOBUTTON "Back", 315, 110, 70, 32, 12
+        LISTBOX         351, 12, 26, 58, 26, WS_GROUP | LS_NOADJUSTPOS
+        AUTOCHECKBOX    "Bold", 352, 73, 40, 34, 12
+        CTEXT           "Size", 354, 73, 28, 34, 12, NOT WS_GROUP | DT_VCENTER
+        AUTOCHECKBOX    "Italic", 353, 110, 40, 34, 12
+        CONTROL         "", 355, 112, 27, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        AUTOCHECKBOX    "Year", 331, 155, 79, 64, 12, WS_GROUP
+        AUTOCHECKBOX    "Month", 332, 154, 67, 64, 12
+        AUTOCHECKBOX    "Month name", 333, 155, 55, 64, 12
+        AUTOCHECKBOX    "Day", 334, 155, 43, 64, 12
+        AUTOCHECKBOX    "Day of week", 335, 154, 27, 64, 12
+        CTEXT           "x", 361, 7, 2, 17, 12, NOT WS_GROUP | DT_VCENTER
+        CONTROL         "", 371, 26, 2, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        CTEXT           "y", 362, 54, 2, 17, 12, NOT WS_GROUP | DT_VCENTER
+        CTEXT           "w", 363, 100, 2, 17, 12, NOT WS_GROUP | DT_VCENTER
+        CONTROL         "", 372, 71, 2, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        CTEXT           "h", 364, 136, 2, 17, 12, NOT WS_GROUP | DT_VCENTER
+        CONTROL         "", 373, 117, 2, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        CONTROL         "", 374, 153, 2, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        AUTOCHECKBOX    "Hours", 341, 226, 79, 64, 12, WS_GROUP
+        AUTOCHECKBOX    "Minutes", 342, 226, 67, 64, 12
+        AUTOCHECKBOX    "Seconds", 343, 226, 55, 64, 12
+        AUTOCHECKBOX    "AM/PM", 344, 226, 42, 64, 12
+        LTEXT           "Refresh", 345, 226, 29, 30, 12,
+                        NOT WS_GROUP | DT_VCENTER
+        CONTROL         "", 346, 262, 29, 30, 12, WC_SPINBUTTON,
+                        WS_VISIBLE | WS_TABSTOP | SPBS_READONLY | SPBS_MASTER | SPBS_FASTSPIN | SPBS_JUSTRIGHT
+        PUSHBUTTON      "Apply", 390, 184, 2, 38, 16, WS_GROUP
+        PUSHBUTTON      "Default", 391, 222, 2, 38, 16
+        PUSHBUTTON      "Help", 392, 259, 2, 38, 16
+        GROUPBOX        "Message", 380, 6, 102, 289, 20
+        GROUPBOX        "Color", 310, 6, 66, 138, 32
+        GROUPBOX        "Font", 350, 4, 25, 144, 36
+        GROUPBOX        "Date", 330, 150, 22, 70, 76
+        GROUPBOX        "Size", 360, 3, 2, 180, 21
+        GROUPBOX        "Time", 340, 226, 21, 69, 77
+    END
+END
