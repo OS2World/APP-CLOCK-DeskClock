@@ -9,7 +9,7 @@ LICENSE
 
 COMPILE TOOLS
 ==============
-- 
+- DrDialog
 
 AUTHORS
 =============
